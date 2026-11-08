@@ -1,0 +1,233 @@
+
+.pricing-hero {
+    padding: 95px 8% 75px;
+    text-align: center;
+    background: radial-gradient(ellipse at top, #142e50, #07111f 72%);
+}
+
+.pricing-hero h1 {
+    font-size: clamp(38px, 5.5vw, 65px);
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.pricing-hero h1 span,
+.pricing-cta h2 span {
+    color: #3185ff;
+}
+
+.pricing-hero > p:last-child {
+    max-width: 600px;
+    margin: 20px auto 0;
+    color: #9baac0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.pricing-section {
+    padding: 60px 7% 75px;
+    background: #091625;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.price-card {
+    position: relative;
+    padding: 32px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    background: linear-gradient(145deg, #102039, #0b1728);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    border-color: #3185ff;
+}
+
+.price-card.featured {
+    border-color: #3185ff;
+    background: linear-gradient(155deg, #142d4c, #0b1728 70%);
+    box-shadow: 0 15px 50px rgba(49, 133, 255, 0.1);
+}
+
+.popular-label {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    padding: 7px 12px;
+    border-radius: 0 0 7px 7px;
+    background: #3185ff;
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.plan-label {
+    color: #48d9ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.price-card h2 {
+    margin-top: 13px;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.plan-description {
+    min-height: 65px;
+    margin-top: 12px;
+    color: #9baac0;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.price {
+    margin-top: 22px;
+    font-size: 43px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.price span {
+    margin-right: 4px;
+    color: #48d9ff;
+    font-size: 17px;
+    letter-spacing: 0;
+}
+
+.price.custom-price {
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.price-note {
+    margin-top: 2px;
+    color: #8495ad;
+    font-size: 10px;
+}
+
+.price-button {
+    display: block;
+    margin-top: 25px;
+    padding: 13px 10px;
+    border: 1px solid #3185ff;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+    background: #3185ff;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.price-button:hover {
+    background: #1767e8;
+    border-color: #1767e8;
+}
+
+.feature-divider {
+    margin: 27px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-heading {
+    color: #8495ad;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.price-card ul {
+    margin-top: 17px;
+    list-style: none;
+}
+
+.price-card li {
+    margin: 15px 0;
+    color: #c4d0e1;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.price-card li::first-letter {
+    color: #48d9ff;
+}
+
+.pricing-disclaimer {
+    max-width: 900px;
+    margin: 30px auto 0;
+    color: #8495ad;
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.pricing-cta {
+    padding: 85px 8%;
+    text-align: center;
+    background: radial-gradient(ellipse at center, #102747, #07111f 70%);
+}
+
+.pricing-cta h2 {
+    font-size: clamp(30px, 4.5vw, 45px);
+    letter-spacing: -1px;
+}
+
+.pricing-cta > p:not(.tagline) {
+    margin: 17px 0 28px;
+    color: #9baac0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media (max-width: 950px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .price-card.featured {
+        order: -1;
+    }
+}
+
+@media (max-width: 620px) {
+    .pricing-hero {
+        padding: 70px 7%;
+    }
+
+    .pricing-hero h1 {
+        letter-spacing: -1.3px;
+    }
+
+    .pricing-section {
+        padding: 45px 7%;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card.featured {
+
+        order: 0;
+    }
+
+    .plan-description {
+        min-height: auto;
+    }
+
+    .pricing-cta {
+        padding: 65px 7%;
+    }
+}
